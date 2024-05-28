@@ -4,8 +4,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING, allowNull: false
     }, name: {
       type: DataTypes.STRING, allowNull: false
+    }, enName: {
+      type: DataTypes.STRING
     }, pid: {
-      type: DataTypes.INTEGER, allowNull: false //0:为根节点
+      type: DataTypes.INTEGER, defaultValue: 0, allowNull: false //0:为根节点
     }, status: {
       type: DataTypes.INTEGER, defaultValue: 0
     }
